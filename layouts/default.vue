@@ -1,62 +1,103 @@
+
 <template>
-  <div>
-    <Nuxt />
+  <div class="layout">
+    <Layout>
+      <Header>
+        <Menu mode="horizontal" theme="dark" active-name="1">
+          <div class="layout-logo"></div>
+          <div class="layout-nav">
+            <MenuItem name="1">
+              <nuxtLink to="/">
+                <Icon type="ios-navigate"></Icon>
+                Home
+              </nuxtLink>
+            </MenuItem>
+            <MenuItem name="2">
+              <nuxtLink to="/services">
+                <Icon type="ios-navigate"></Icon>
+                Services
+              </nuxtLink>
+            </MenuItem>
+            <MenuItem name="3">
+              <nuxtLink to="/teams">
+                <Icon type="ios-navigate"></Icon>
+                Teams
+              </nuxtLink>
+            </MenuItem>
+            <MenuItem name="4">
+              <nuxtLink to="/our_works">
+                <Icon type="ios-navigate"></Icon>
+               Our Works
+              </nuxtLink>
+            </MenuItem>
+            <MenuItem name="5">
+              <nuxtLink to="/clients">
+                <Icon type="ios-navigate"></Icon>
+                Clients
+              </nuxtLink>
+            </MenuItem>
+            <MenuItem name="5">
+              <nuxtLink to="/pages">
+                <Icon type="ios-navigate"></Icon>
+                About Us
+              </nuxtLink>
+            </MenuItem>
+            <MenuItem name="5">
+              <nuxtLink to="/pages">
+                <Icon type="ios-navigate"></Icon>
+                Privacy
+              </nuxtLink>
+            </MenuItem>
+            <MenuItem name="5">
+              <nuxtLink to="/pages">
+                <Icon type="ios-navigate"></Icon>
+                Terms And Conditions
+              </nuxtLink>
+            </MenuItem>
+          </div>
+        </Menu>
+      </Header>
+      <Content style="padding: 0 50px ; margin-top: 20px">
+
+        <Card>
+          <div style="min-height: 200px;">
+           <nuxt />
+          </div>
+        </Card>
+      </Content>
+      <Footer class="layout-footer-center">2011-2016 &copy; TalkingData</Footer>
+    </Layout>
   </div>
 </template>
+<script>
+export default {
 
-<style>
-html {
-  font-family:
-    'Source Sans Pro',
-    -apple-system,
-    BlinkMacSystemFont,
-    'Segoe UI',
-    Roboto,
-    'Helvetica Neue',
-    Arial,
-    sans-serif;
-  font-size: 16px;
-  word-spacing: 1px;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
 }
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  margin: 0;
-}
-
-.button--green {
-  display: inline-block;
+</script>
+<style scoped>
+.layout{
+  border: 1px solid #d7dde4;
+  background: #f5f7f9;
+  position: relative;
   border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
+  overflow: hidden;
 }
-
-.button--green:hover {
-  color: #fff;
-  background-color: #3b8070;
+.layout-logo{
+  width: 100px;
+  height: 30px;
+  background: #5b6270;
+  border-radius: 3px;
+  float: left;
+  position: relative;
+  top: 15px;
+  left: 20px;
 }
+.layout-nav{
 
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
+  margin: 0 auto;
+  margin-right: 20px;
 }
-
-.button--grey:hover {
-  color: #fff;
-  background-color: #35495e;
+.layout-footer-center{
+  text-align: center;
 }
 </style>

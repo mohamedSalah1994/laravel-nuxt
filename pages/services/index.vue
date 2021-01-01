@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div>
-      home page
+      Services
     </div>
   </div>
 </template>
