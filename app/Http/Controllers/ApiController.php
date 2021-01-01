@@ -2,12 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Contact;
+
 use Illuminate\Http\Request;
-use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Validator;
+
+
 
 class ApiController extends Controller
 {
-
+    use ResponseTrait , ModuleTrait;
     protected $module_name;
     protected $model;
 
@@ -45,53 +49,22 @@ class ApiController extends Controller
             return $this->errorResponse($e->getMessage());
         }
     }
-    protected function setModuleName($module_name)
-    {
-        $this->module_name = $module_name;
-    }
-
-    protected function initModel()
-    {
-        $module = Str::lower($this->module_name);
-        $module = Str::singular($module);
-        $module = str::camel($module);
-        $module = Str::ucfirst($module);
-        if (in_array($module, $this->expectModules())) {
-            return false;
+    public function storeContact(Request $request){
+        $v = Validator::make($request->all() , [
+            'name' => 'required|min:2|max:50',
+            'email'=> 'required|min:2|max:50|email',
+            'mobile'=>'required|min:5|max:20',
+            'message'=>'required|min:5|max:500',
+        ]);
+        if ($v->fails()){
+            return $this->res($v->errors() , false , 'we get an error');
+        }else{
+            Contact::create($request->all());
+            return $this->res([], true, 'thanks for send your message');
         }
-        $namespace = 'App\Models\\' . $module;
-        $this->model = new $namespace;
-
     }
 
-    protected function expectModules()
-    {
-        return ['Contact'];
-    }
-    protected function errorResponse($e)
-    {
-        return $this->res([], false, $e);
-    }
 
-    protected function successWithData($data)
-    {
-        return $this->res($data, true, 'here what we found in ' . $this->module_name);
-    }
-
-    protected function youCantAccess()
-    {
-        return $this->res([], false, 'you can not access this module');
-    }
-
-    protected function res($data = [], $status = true, $message = '')
-    {
-        $data = [
-            'payload' => $data,
-            'status' => $status,
-            'message' => $message
-        ];
-        return response()->json($data);
-    }
 }
 
 

@@ -20,3 +20,5 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 Route::get('module/{module_name}' , [ApiController::class , 'index']);
 Route::get('module/{module_name}/{id}' , [ApiController::class , 'getById']);
+Route::get('module/{module_name}/{id}' , [ApiController::class , 'getById']);
+Route::post('contacts' , [ApiController::class , 'storeContact']);
