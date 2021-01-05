@@ -1,4 +1,9 @@
 export default {
+  env: {
+    baseUrl: process.env.BASE_URL || 'http://127.0.0.1:8000',
+    moduleUrl: process.env.MODULE_URL || 'http://127.0.0.1:8000/api/module/',
+    imageUrl: process.env.IMAGE_URL || 'http://127.0.0.1:8000/storage/'
+  },
   // Disable server-side rendering (https://go.nuxtjs.dev/ssr-mode)
   ssr: false,
 
@@ -25,7 +30,8 @@ export default {
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
-    '@/plugins/iview'
+    '@/plugins/iview',
+    '@/plugins/images',
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
@@ -33,6 +39,7 @@ export default {
 
   // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
   buildModules: [
+    '@nuxtjs/dotenv'
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
