@@ -4,6 +4,9 @@ export default (context, inject) => {
       if (type !== undefined){
         t = '-'+type;
       }
+      if (type === 'org'){
+        t = ''
+      }
       let imgName = img.split('.');
       return context.env.imageUrl+imgName[0]+t+'.'+imgName[1]
   }

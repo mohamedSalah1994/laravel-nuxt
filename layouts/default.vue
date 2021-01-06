@@ -37,19 +37,19 @@
               </nuxtLink>
             </MenuItem>
             <MenuItem name="5">
-              <nuxtLink to="/pages">
+              <nuxtLink to="/pages/5">
                 <Icon type="ios-navigate"></Icon>
                 About Us
               </nuxtLink>
             </MenuItem>
             <MenuItem name="5">
-              <nuxtLink to="/pages">
+              <nuxtLink to="/pages/6">
                 <Icon type="ios-navigate"></Icon>
                 Privacy
               </nuxtLink>
             </MenuItem>
             <MenuItem name="5">
-              <nuxtLink to="/pages">
+              <nuxtLink to="/pages/7">
                 <Icon type="ios-navigate"></Icon>
                 Terms And Conditions
               </nuxtLink>

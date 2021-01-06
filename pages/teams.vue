@@ -23,10 +23,6 @@
                   <Icon type="logo-linkedin" />
                 </nuxtLink>
               </template>
-
-
-
-
             </div>
           </Card>
         </Col>

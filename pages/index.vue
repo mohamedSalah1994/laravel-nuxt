@@ -1,15 +1,21 @@
 <template>
   <div class="container">
     <div>
-      home page
+      <slider />
+      <test />
     </div>
   </div>
 </template>
 
 <script>
+import slider from "~/components/home/slider";
+import test from "~/components/home/test";
 
 export default {
-
+    comments:{
+      slider,
+      test
+    }
 }
 </script>
 
