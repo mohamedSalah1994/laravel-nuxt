@@ -4,8 +4,10 @@
     <Layout>
       <Header>
         <Menu mode="horizontal" theme="dark" active-name="1">
-          <div class="layout-logo"></div>
-          <div class="layout-nav">
+          <div class="layout-logo">
+            <img src="logo.png"  width="100" style="margin-bottom: 20px">
+          </div>
+          <div class="layout-nav" >
             <MenuItem name="1">
               <nuxtLink to="/">
                 <Icon type="ios-navigate"></Icon>
