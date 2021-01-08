@@ -42,6 +42,11 @@
 <script>
 import loading from "@/components/loading";
 export default {
+  head(){
+    return{
+      title : 'Teams'
+    }
+  },
   comments:{
     loading
   },

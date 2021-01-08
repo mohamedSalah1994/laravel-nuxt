@@ -46,6 +46,11 @@
 <script>
 import loading from "@/components/loading";
 export default {
+  head(){
+    return{
+      title : 'Our Works'
+    }
+  },
   comments:{
     loading
   },

@@ -9,49 +9,49 @@
           </div>
           <div class="layout-nav" >
             <MenuItem name="1">
-              <nuxtLink to="/">
+              <nuxtLink to="/" class="font_color">
                 <Icon type="ios-navigate"></Icon>
                 Home
               </nuxtLink>
             </MenuItem>
             <MenuItem name="2">
-              <nuxtLink to="/services">
+              <nuxtLink to="/services" class="font_color">
                 <Icon type="ios-navigate"></Icon>
                 Services
               </nuxtLink>
             </MenuItem>
             <MenuItem name="3">
-              <nuxtLink to="/teams">
+              <nuxtLink to="/teams" class="font_color">
                 <Icon type="ios-navigate"></Icon>
                 Teams
               </nuxtLink>
             </MenuItem>
             <MenuItem name="4">
-              <nuxtLink to="/our_works">
+              <nuxtLink to="/our_works" class="font_color">
                 <Icon type="ios-navigate"></Icon>
                Our Works
               </nuxtLink>
             </MenuItem>
             <MenuItem name="5">
-              <nuxtLink to="/clients">
+              <nuxtLink to="/clients" class="font_color">
                 <Icon type="ios-navigate"></Icon>
                 Clients
               </nuxtLink>
             </MenuItem>
             <MenuItem name="5">
-              <nuxtLink to="/pages/5">
+              <nuxtLink to="/pages/5" class="font_color">
                 <Icon type="ios-navigate"></Icon>
                 About Us
               </nuxtLink>
             </MenuItem>
             <MenuItem name="5">
-              <nuxtLink to="/pages/6">
+              <nuxtLink to="/pages/6" class="font_color">
                 <Icon type="ios-navigate"></Icon>
                 Privacy
               </nuxtLink>
             </MenuItem>
             <MenuItem name="5">
-              <nuxtLink to="/pages/7">
+              <nuxtLink to="/pages/7" class="font_color">
                 <Icon type="ios-navigate"></Icon>
                 Terms And Conditions
               </nuxtLink>
@@ -73,15 +73,17 @@
 </template>
 <script>
 export default {
-
+  head(){
+    return{
+      title : 'Home'
+    }
+  },
 }
 </script>
 <style scoped>
 .layout{
-  border: 1px solid #d7dde4;
   background: #f5f7f9;
   position: relative;
-  border-radius: 4px;
   overflow: hidden;
 }
 .layout-logo{
@@ -101,5 +103,8 @@ export default {
 }
 .layout-footer-center{
   text-align: center;
+}
+.font_color{
+  color: #eeeeee;
 }
 </style>

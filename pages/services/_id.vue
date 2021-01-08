@@ -23,6 +23,11 @@
 <script>
 import loading from "@/components/loading";
 export default {
+  head(){
+    return{
+      title : 'services | '+this.row.name
+    }
+  },
   comments:{
     loading
   },

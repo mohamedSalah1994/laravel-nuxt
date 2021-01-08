@@ -32,6 +32,11 @@
 <script>
 import loading from "@/components/loading";
 export default {
+  head(){
+    return{
+      title : 'Services'
+    }
+  },
   comments:{
     loading
   },

@@ -1,7 +1,24 @@
 <template>
   <Carousel v-model="value1" loop>
+
     <CarouselItem v-for="row in rows" :key="'slider_'+row.id">
-      <img :src="$images(row.image , 'org')"  style="width: 100%;max-height: 500px">
+      <div class="rel">
+
+        <template v-if="row.link">
+          <a :href="row.link">
+            <img :src="$images(row.image , 'org')"  style="width: 100%;max-height: 500px">
+            <h3 class="sliderTitle">{{row.name}}</h3>
+
+          </a>
+        </template>
+        <template v-else>
+          <img :src="$images(row.image , 'org')"  style="width: 100%;max-height: 500px">
+          <h3 class="sliderTitle">{{row.name}}</h3>
+
+        </template>
+
+      </div>
+
     </CarouselItem>
 
   </Carousel>
@@ -33,3 +50,21 @@ export default {
   }
 }
 </script>
+<style>
+.rel{
+  position: relative;
+}
+.sliderTitle{
+  position: absolute;
+  z-index: 10;
+  top: 40%;
+  left: 10%;
+  font-size: 50px;
+  color: #d7dde4;
+  background:dimgray;
+  opacity: .8;
+  padding: 5px;
+  text-transform: uppercase;
+
+}
+</style>
