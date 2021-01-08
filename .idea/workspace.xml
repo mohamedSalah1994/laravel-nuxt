@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="08c85478-6eed-4d10-9456-04fd460805fa" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ApiController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ApiController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Contact.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Contact.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,11 +151,14 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Models" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/Models" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/Models" />
       <recent name="$PROJECT_DIR$/app" />
@@ -186,7 +186,18 @@
       <workItem from="1609256763748" duration="3807000" />
       <workItem from="1609289432401" duration="6713000" />
       <workItem from="1609379548635" duration="3176000" />
-      <workItem from="1609465311371" duration="1893000" />
+      <workItem from="1609465311371" duration="4398000" />
+      <workItem from="1609599354319" duration="648000" />
+      <workItem from="1609722570137" duration="23000" />
+      <workItem from="1609725416883" duration="1594000" />
+      <workItem from="1609778697925" duration="2000" />
+      <workItem from="1609798490775" duration="209000" />
+      <workItem from="1609798935952" duration="7775000" />
+      <workItem from="1609888179543" duration="88000" />
+      <workItem from="1609888311907" duration="5063000" />
+      <workItem from="1609951491292" duration="1249000" />
+      <workItem from="1610037739005" duration="2260000" />
+      <workItem from="1610064550682" duration="730000" />
     </task>
     <servers />
   </component>
